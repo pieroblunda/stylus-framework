@@ -1,0 +1,107 @@
+@require "framework.variables" 
+@import "framework.base"
+@import "framework.button"
+@import "framework.grid"
+@import "framework.helpers" 
+@import "framework.navbar" 
+@import "framework.table"
+@import "control.form"
+@import "control.checkbox"
+@import "control.switch"
+@import "control.upload"
+
+body
+  margin 0
+  min-height 100%
+  & > header
+    display flex
+    background-color var(--colorBlue-900)
+    position sticky
+    z-index 999
+    top 0
+    height 48px
+    section
+      flex 1
+      &.logo
+        flex 0 1 240px
+        background-size contain
+        background-repeat no-repeat
+        background-position center center
+      &.main
+        display flex
+        align-items center
+        justify-content flex-end
+        padding 0 64px
+        background-color $colorBlue-800
+      img
+        width 100%
+      button
+        background-color #00a650
+        border 0
+        padding 8px 16px
+        color white
+        border-radius 4px
+        text-transform uppercase
+        cursor pointer
+        &[disabled]
+          cursor normal
+          pointer-events none
+          opacity .3
+
+article
+  section
+    margin-bottom 16px
+    padding 16px
+    background-color white
+    border-radius 6px
+    border 1px solid #ccc
+    header
+      margin-bottom 16px
+
+// nav
+//   flex 0 1 240px
+//   min-height 100%
+//   min-width 240px
+//   background-color $colorBlue-000
+//   ul
+//     margin 0
+//     padding 0
+//     list-style-type none
+//     position sticky
+//     top 48px
+//     height 100%
+//     li
+//       padding 16px
+//       &:nth-child(odd)
+//         background-color $colorBlue-100
+//       &:nth-child(even)
+//         background-color $colorBlue-200
+//       &.stiky-bottom
+//         position: absolute;
+//         bottom: 0;
+//         width: 100%;
+//       button
+//         background-color transparent
+//         border 0
+//         cursor pointer
+//         color rgb(109, 17, 138)
+//         font-size 1.2rem
+//         margin 0
+
+.itemWrapper
+    border-bottom 2px solid #cecece
+    margin-bottom 16px
+  
+.btn-lang-wrapper
+  display flex
+  flex 0 1 auto
+  justify-content space-between
+  button
+    margin 0
+    padding 0 16px
+    border 0
+    background-color transparent
+    &:first-child
+      padding-left 0
+    &:last-child
+      padding-right 0

@@ -1,0 +1,131 @@
+input
+  &[type="text"]
+  &[type="number"]
+  &[type="email"]
+  &[type="url"]
+    padding 8px
+    border-radius 4px
+    border 1px solid #ccc
+    width 100%
+    display block
+    font-size 1rem
+    margin 0
+    outline none
+    -webkit-appearance none
+
+  &:focus
+    border-color #2773d9
+  &[disabled="disabled"]
+    border 0
+    padding 0
+  &[readonly]
+    background-color #cccccc66
+
+
+label 
+  &.has-error
+    input
+      &:invalid
+        border 1px solid #dc3545
+    
+    p
+      &.error-message
+        display block
+      
+      &.hint
+        display none
+    
+    .input-group
+        &.space-between
+            display flex
+            justify-content space-between
+
+label
+    display block
+
+  &[for]
+    display inline-block
+    margin-left 16px
+    vertical-align middle
+  
+  &.required
+    &:before
+      content '*'
+      margin-right 4px
+      color #dc3545
+
+.input-group
+    margin-bottom 16px
+
+.textarea
+  white-space: break-spaces;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  width 100%
+  outline none
+
+.hint
+.block-hint
+.error-message
+    margin 0
+    font-size 12px
+    line-height 16px
+    font-style italic
+    color #666
+    display block
+    
+.block-hint
+  margin-bottom 16px
+    
+.error-message
+  color #dc3545
+  display none
+
+.switch
+    position relative
+    display inline-block
+    width 60px
+    height 34px
+    input
+        opacity 0
+        width 0
+        height 0
+
+
+.slider
+    position absolute
+    cursor pointer
+    top 0
+    left 0
+    right 0
+    bottom 0
+    background-color #ccc
+    -webkit-transition .2s
+    transition .2s
+    &:before
+        position absolute
+        content ""
+        height 26px
+        width 26px
+        left 4px
+        bottom 4px
+        background-color white
+        -webkit-transition .2s
+        transition .2s
+    &.round
+        border-radius 34px
+        &:before
+            border-radius 50%
+
+input
+    &:checked
+        & + .slider
+            background-color #2196F3
+            &:before
+                -webkit-transform translateX(26px)
+                -ms-transform translateX(26px)
+                transform translateX(26px)
+    &:focus
+        & + .slider
+            box-shadow 0 0 1px #2196F3

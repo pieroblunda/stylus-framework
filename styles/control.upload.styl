@@ -1,0 +1,60 @@
+.upload-container
+  margin-bottom 16px
+  display flex
+  flex-wrap wrap
+  column-gap 16px
+  
+  .overlay
+    width 80px
+    height 80px
+    position absolute
+    top 18px
+    left 0
+    border-radius 4px
+    display flex
+    cursor pointer
+    justify-content center
+    align-items center
+    &.overlay-loading
+      fill #666
+    &.overlay-delete
+      opacity 0
+      background-color #FFFFFF00
+      &:hover
+        opacity 1
+        color red
+        background-color #FFFFFF99
+    i
+      display inline-block
+      opacity 1
+      width 32px
+  
+  .img-wrapper
+    flex 0
+    position relative
+  .text-wrapper
+    flex 1
+  p
+    margin-bottom 2px
+  label
+    flex-basis 100%
+  img
+    width 80px
+    height 80px
+    border-radius 4px
+    display block
+  input[type="text"]
+    display none
+  input[type="file"]
+    position absolute
+    display none
+  
+.drop-area
+  width 80px
+  height 80px
+  background-color #dedede
+  border 2px solid #999
+  padding 16px
+  border-radius 4px
+  margin-right 16px
+  cursor pointer

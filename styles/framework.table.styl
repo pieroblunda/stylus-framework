@@ -1,0 +1,29 @@
+/* ------------------- */
+/* ------ TABLE ------ */
+/* ------------------- */
+table
+  width 100%
+  border-collapse collapse
+  thead
+    tr
+      font-weight bold
+      background-color var(--colorBlack-200)
+  tbody
+    tr
+      &:nth-child(odd)
+        background-color var(--colorBlue-100)
+  td
+    &.width-content
+    &.fit-content
+      width fit-content
+    &.width-20
+      width 20%
+    &.width-30
+      width 30%
+    &.width-40
+      width 40%
+
+  &.bordered
+    td
+      border 1px solid
+      padding 4px 8px

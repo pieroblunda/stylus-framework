@@ -1,0 +1,74 @@
+/* ------------------- */
+/* ----- GENERAL ----- */
+/* ------------------- */
+
+*
+  box-sizing border-box
+  font-family Helvetica Neue
+  margin 0
+  padding 0
+
+html
+  height 100%
+  font-size var(--fontsizebase)
+
+body
+article
+aside
+  background-color #F0F8FF
+
+article
+  width 100%
+    
+label
+  display block
+  margin-bottom 8px
+  
+a
+  text-decoration none
+
+hr
+  border none
+  border-top 2px solid #ccc
+  
+ul
+  list-style none
+  &.horizontal
+    li
+      display inline-block!important
+      height 100%
+  &.vertical
+    flex-direction column
+    height auto  
+
+ul
+li
+  margin 0
+  padding 0
+  
+img
+picture
+  width 100%
+  max-width 100%
+  height auto
+  display block
+  &.aspect-ratio
+    width 100%
+    height 100%
+    object-fit contain
+
+figure
+  width auto!important
+  max-width 100%!important
+  figcaption
+    font-size 85%
+    margin-bottom 16px
+    color #5f656c
+    font-style italic
+
+video
+p
+  width 100%
+
+[onclick]
+  cursor pointer

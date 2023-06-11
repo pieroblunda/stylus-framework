@@ -1,0 +1,433 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" href="app.min.css")
+    link(rel="stylesheet" href="style.css")
+  
+  body
+    article
+      main
+        
+        section
+          h1 navBar
+          
+          nav.d-flex
+            ul.horizontal
+              li
+                button.btn.btn-icon
+                  include ./assets/bars-solid.svg
+            ul.horizontal
+              li
+                a.btn(href="#" title="I am a link title") Link 1
+              li
+                a.btn(href="#" title="I am a link title") Link 2
+              li
+                a.btn(href="#" title="I am a link title") Link 3
+                
+            ul.horizontal
+              li
+                a.btn.btn-icon(href="/select-country")
+                  include ./assets/earth-americas-solid.svg      
+              li
+                a.btn.btn-icon(href="#")
+                  span.badge.hidden(data-cart-count-badge)
+                  include ./assets/shopping-cart-solid.svg
+        
+        section
+          h1 Text &amp; General
+          hr 
+          h1 Heading 1
+          h2 Heading 2
+          h3 Heading 3
+          p Lorem ipsum dolor sit amet, an mundi reprimique qui. Est velit vocibus sensibus ad, et vis wisi habeo. Aeque accusata constituam duo in, usu ridens admodum ex. Mei ei quod iriure, postea fabulas mel an.
+          p Lorem ipsum dolor sit amet, an mundi reprimique qui. Est velit vocibus sensibus ad, et vis wisi habeo. Aeque accusata constituam duo in, usu ridens admodum ex. Mei ei quod iriure, postea fabulas mel an.
+          p Lorem ipsum dolor sit amet, an mundi reprimique qui. Est velit vocibus sensibus ad, et vis wisi habeo. Aeque accusata constituam duo in, usu ridens admodum ex. Mei ei quod iriure, postea fabulas mel an.
+          
+          ul.vertical
+            li Vertical element 1
+            li Vertical element 2
+            li Vertical element 3
+            li Vertical element 4
+          
+          ul.horizontal
+            li Horizontal element 1
+            li Horizontal element 2
+            li Horizontal element 3
+            li Horizontal element 4
+          hr
+          label I am a label text
+          
+          img(src="images/originalPic.jpg" onerror="this.src='https://cdn.corrieredellosport.it/img/990/495/2023/05/28/182801256-4f524704-b79e-4cd6-af84-7c63eef59bd9.jpg'")
+          
+          table
+            tr
+              td TD
+              td TD
+            tr
+              td TD
+              td TD
+            tr
+              td TD
+              td TD
+          
+        section
+          h1 Form elements
+          hr
+          
+          form
+            .input-group
+              label Sku
+                input(
+                type="text"
+                name="sku"
+                value="myValue"
+                form="tagForm"
+                required)
+                p.hint Codigo de uso interno
+                p.error-message _message_
+            
+            .input-group
+              label Personal eMail
+                input(
+                type="email"
+                name="sku"
+                value="myValue"
+                form="tagForm"
+                required)
+                p.hint Personal eMail
+                p.error-message _message_
+            
+            .input-group
+              label Url
+                input(
+                type="url"
+                name="sku"
+                value="myValue"
+                form="tagForm"
+                required)
+                p.hint Personal URL
+                p.error-message _message_
+            
+            .input-group
+              label Url
+                input(
+                type="number"
+                name="mynumber"
+                value="5"
+                form="tagForm"
+                required)
+                p.hint Personal URL
+                p.error-message _message_
+                
+            .input-group
+              | Checkbock
+            .input-group
+              | Radio
+            .input-group
+              | textarea
+            .input-group
+              | color
+            .input-group
+              | Upload
+            .input-group
+              | Tags
+            .input-group
+              | Select
+            .input-group
+              | Componente Switch
+        
+        section
+          h1 Colors
+        
+        section
+          h1 Font Size
+          label(style="font-size:0.563rem") A Visual Type Scale
+          label(style="font-size:0.75rem") A Visual Type Scale
+          label(style="font-size:1rem") A Visual Type Scale
+          label(style="font-size:1.333rem") A Visual Type Scale
+          label(style="font-size:1.777rem") A Visual Type Scale
+          label(style="font-size:2.369rem") A Visual Type Scale
+          label(style="font-size:3.157rem") A Visual Type Scale
+          label(style="font-size:4.209rem") A Visual Type Scale
+          label(style="font-size:5.61rem") A Visual Type Scale
+          
+        section
+          h1 Variables
+          table.bordered
+            thead
+              tr
+                td Variable
+                td value
+            tbody
+              tr
+                td $framework-sizebase
+                td 8px
+              tr
+                td --size-100
+                td 1px
+              tr
+                td --size-200
+                td 2px
+              tr
+                td --size-300
+                td 4px
+              tr
+                td --size-400
+                td 8px
+              tr
+                td --size-500
+                td 16px
+              tr
+                td --size-600
+                td 24px
+              tr
+                td --size-700
+                td 32px
+              tr
+                td --size-800
+                td 48px
+              tr
+                td --size-900
+                td 64px
+          
+          p https://coolors.co/gradient-palette/dfdfdf-000000?number=9
+          table
+            thead
+              tr
+                td Variable
+                td value
+                td
+            tbody
+              tr
+                td --colorBlack-100
+                td #dfdfdf
+                td
+                  .color-preview(style="background-color:#dfdfdf;")
+              tr
+                td --colorBlack-200
+                td 2px
+                td
+                  .color-preview(style="background-color:#c3c3c3;")
+              tr
+                td --colorBlack-300
+                td 4px
+                td
+                  .color-preview(style="background-color:#a7a7a7;")
+              tr
+                td --colorBlack-400
+                td 8px
+                td
+                  .color-preview(style="background-color:#8b8b8b;")
+              tr
+                td --colorBlack-500
+                td 16px
+                td
+                  .color-preview(style="background-color:#707070;")
+              tr
+                td --colorBlack-600
+                td 24px
+                td
+                  .color-preview(style="background-color:#545454;")
+              tr
+                td --colorBlack-700
+                td 32px
+                td
+                  .color-preview(style="background-color:#383838;")
+              tr
+                td --colorBlack-800
+                td 48px
+                td
+                  .color-preview(style="background-color:#1c1c1c;")
+              tr
+                td --colorBlack-900
+                td 64px
+                td
+                  .color-preview(style="background-color:#000000;")
+          
+          p https://coolors.co/palette/e3f2fd-bbdefb-90caf9-64b5f6-42a5f5-2196f3-1e88e5-1976d2-1565c0-0d47a1
+          table
+            thead
+              tr
+                td Variable
+                td value
+                td
+            tbody
+              tr
+                td --colorBlue-000
+                td #dfdfdf
+                td
+                  .color-preview(style="background-color:#F0F8FF;")
+              tr
+                td --colorBlue-100
+                td 2px
+                td
+                  .color-preview(style="background-color:#BBDEFB;")
+              tr
+                td --colorBlue-200
+                td 4px
+                td
+                  .color-preview(style="background-color:#90CAF9;")
+              tr
+                td --colorBlue-300
+                td 8px
+                td
+                  .color-preview(style="background-color:#64B5F6;")
+              tr
+                td --colorBlue-400
+                td 16px
+                td
+                  .color-preview(style="background-color:#42A5F5;")
+              tr
+                td --colorBlue-500
+                td 24px
+                td
+                  .color-preview(style="background-color:#2196F3;")
+              tr
+                td --colorBlue-600
+                td 32px
+                td
+                  .color-preview(style="background-color:#1E88E5;")
+              tr
+                td --colorBlue-700
+                td 48px
+                td
+                  .color-preview(style="background-color:#1976D2;")
+              tr
+                td --colorBlue-800
+                td 64px
+                td
+                  .color-preview(style="background-color:#1565C0;")
+              tr
+                td --colorBlue-900
+                td 64px
+                td
+                  .color-preview(style="background-color:#0D47A1;")
+        
+        section
+          h1 Helpers
+          table
+            thead
+              tr
+                td css class
+                td Description
+              tr
+                td .hidden
+                td display none!important
+              tr
+                td .d-none
+                td display none!important
+              tr
+                td .d-block
+                td display block!important
+              tr
+                td .d-inline
+                td display inline!important
+              tr
+                td .style-type-none
+                td list-style-type none
+        
+        section
+          h1 Buttons
+          
+          .row
+            .col.text-center
+              p Reposo
+            .col.text-center
+              p Hover
+            .col.text-center
+              p Disabled
+            .col
+              p HTML
+          
+          .row
+            .col.text-center
+              button Button
+            .col.text-center
+              button Button
+            .col.text-center
+              button(disabled) Button
+            .col
+              p button
+          
+          .row
+            .col.text-center
+              button.btn-primary Button
+            .col.text-center
+              button.btn-primary Button
+            .col.text-center
+              button.btn-primary(disabled) Button
+            .col
+              p button.btn-primary
+          
+          .row
+            .col.text-center
+              button.btn-danger Button
+            .col.text-center
+              button.btn-danger Button
+            .col.text-center
+              button.btn-danger(disabled) Button
+            .col
+              p button.btn-danger
+          
+          .row
+            .col.text-center
+              button.btn-icon Button
+            .col.text-center
+              button.btn-icon Button
+            .col.text-center
+              button.btn-icon(disabled) Button
+            .col
+              p button.btn-icon
+          
+          .row
+            .col.text-center
+              button.btn-wide Button
+            .col.text-center
+              button.btn-wide Button
+            .col.text-center
+              button.btn-wide(disabled) Button
+            .col
+              p button.btn-wide
+          
+          .row
+            .col.text-center
+              button.btn-link Button
+            .col.text-center
+              button.btn-link Button
+            .col.text-center
+              button.btn-link(disabled) Button
+            .col
+              p button.btn-link
+          
+          .row
+            .col.text-center
+              button.add-to-cart Button
+            .col.text-center
+              button.add-to-cart Button
+            .col.text-center
+              button.add-to-cart(disabled) Button
+            .col
+              p button.add-to-cart
+          
+          .row
+            .col.text-center
+              button.transparent Button tranparent
+            .col.text-center
+              button.transparent Button tranparent
+            .col.text-center
+              button.transparent(disabled) Button tranparent
+          
+          .row
+            .col.text-center
+              button.badge Button Badge
+            .col.text-center
+              button.badge Button Badge
+            .col.text-center
+              button.badge(disabled) Button Badge
+              
+        
+        section
+          h1 Grid
+    

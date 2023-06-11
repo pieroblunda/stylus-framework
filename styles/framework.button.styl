@@ -1,0 +1,49 @@
+/* ------------------- */
+/* ------ Button ----- */
+/* ------------------- */
+a[href].btn
+button
+  cursor pointer
+  padding 8px 16px
+  text-decoration none
+  border-radius 4px
+  font-size 14px
+  display inline-block
+  border 0
+  &.btn-primary
+    color white
+    background-color #008060
+    padding 8px 32px
+    &:hover
+      background-color #006e52
+  &.btn-link
+    color #3483fa
+    padding 0
+    border 0
+    background-color transparent
+    cursor pointer
+    &:hover
+      color #1259c3
+    &.active
+      color #000
+      pointer-events none
+      cursor default
+  &.btn-icon
+    // line-height 0
+    vertical-align text-bottom
+    svg
+      width 16px
+      height 16px
+      vertical-align middle
+  &.btn-danger
+    color #dc3545
+    border 1px solid currentColor
+    background-color #dc354533
+  &.btn-full-w
+  &.wide
+    width 100%
+  &[disabled="disabled"]
+  &[disabled]
+    cursor default
+    pointer-events none
+    opacity .5
