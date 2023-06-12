@@ -8,10 +8,6 @@ table
     tr
       font-weight bold
       background-color var(--colorBlack-200)
-  tbody
-    tr
-      &:nth-child(odd)
-        background-color var(--colorBlue-100)
   td
     &.width-content
     &.fit-content
@@ -27,3 +23,8 @@ table
     td
       border 1px solid
       padding 4px 8px
+  &.zebra
+    tbody
+      tr
+        &:nth-child(odd)
+          background-color var(--colorBlue-100)

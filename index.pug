@@ -13,7 +13,7 @@ html(lang="en")
         section
           h1 navBar
           
-          nav.d-flex
+          nav.navbar-top
             ul.horizontal
               li
                 button.btn.btn-icon
@@ -122,21 +122,78 @@ html(lang="en")
                 p.error-message _message_
                 
             .input-group
-              | Checkbock
+              label.checkbox-wrapper
+                input(
+                type="checkbox"
+                checked=(true)
+                name="tags"
+                tienda-datatype="[]"
+                tienda-datakey=`${tag}`
+                form="productForm")
+                span.checkmark.bg-blue
+                | #{tag}
+            
             .input-group
-              | Radio
+              label
+                input(
+                type="radio"
+                name="variantCode"
+                value="none"
+                checked="true"
+                data-variant-values=""
+                form="productForm")
+            
+            code
+              pre
+                | +uiUpload({
+                |   label: `Base ${index+1}`,
+                |   model: `cover-${index}`,
+                |   form: 'mediaForm',
+                |   value: value,
+                | })`
+            
+            
+            .input-group#tagsContainer
+              label.checkbox-wrapper
+                input(
+                type="checkbox"
+                checked="true"
+                name="tags"
+                tienda-datatype="[]"
+                tienda-datakey="tag"
+                form="productForm")
+                span.checkmark.bg-blue
+                | Tag1
+              p Require JS
+              p /tienda-panel/client/js/products.js
+            
+            .input-group
+              label Category
+                select(name="category" form="productForm")
+                  option(
+                  value="Uno"
+                  selected="false"
+                  ) Uno
+                  option(
+                  value="Dos"
+                  selected="true"
+                  ) Dos
+            
+            .input-group
+              label.switch
+                input(
+                form="productForm"
+                type="checkbox"
+                name="useDifferentStockByVariant"
+                onchange="Products.toggleVisibility(this)"
+                data-use-variant
+                checked="true")
+                span.slider.round
+                  
             .input-group
               | textarea
             .input-group
               | color
-            .input-group
-              | Upload
-            .input-group
-              | Tags
-            .input-group
-              | Select
-            .input-group
-              | Componente Switch
         
         section
           h1 Colors
