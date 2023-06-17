@@ -85,7 +85,43 @@ html(lang="en")
                 value="myValue"
                 form="tagForm"
                 required)
-                p.hint Codigo de uso interno
+                p.hint [default]
+                p.error-message _message_
+            
+            .input-group
+              label Sku
+                input(
+                type="text"
+                name="sku"
+                value="myValue"
+                form="tagForm"
+                disabled
+                required)
+                p.hint [disabled]
+                p.error-message _message_
+            
+            .input-group
+              label Sku
+                input(
+                type="text"
+                name="sku"
+                value="myValue"
+                form="tagForm"
+                disabled
+                required)
+                p.hint [readonly]
+                p.error-message _message_
+            
+            .input-group
+              label Sku
+                input(
+                type="text"
+                name="sku"
+                value="myValue"
+                form="tagForm"
+                readonly
+                required)
+                p.hint [readonly]
                 p.error-message _message_
             
             .input-group
@@ -94,6 +130,17 @@ html(lang="en")
                 type="email"
                 name="sku"
                 value="myValue"
+                form="tagForm"
+                required)
+                p.hint Personal eMail
+                p.error-message _message_
+            
+            .input-group.has-error
+              label Personal eMail
+                input(
+                type="email"
+                name="sku"
+                value="contact@mycompany"
                 form="tagForm"
                 required)
                 p.hint Personal eMail
@@ -131,8 +178,70 @@ html(lang="en")
                 tienda-datakey=`${tag}`
                 form="productForm")
                 span.checkmark.bg-blue
-                | #{tag}
+                | Blue
             
+            .input-group
+              label.checkbox-wrapper
+                input(
+                type="checkbox"
+                checked=(true)
+                name="tags"
+                tienda-datatype="[]"
+                tienda-datakey=`${tag}`
+                form="productForm")
+                span.checkmark.bg-red
+                | Red
+            
+            .input-group
+              label.checkbox-wrapper
+                input(
+                type="checkbox"
+                checked=(true)
+                name="tags"
+                tienda-datatype="[]"
+                tienda-datakey=`${tag}`
+                form="productForm")
+                span.checkmark.bg-green
+                | Green
+            
+            .input-group
+              label.checkbox-wrapper
+                input(
+                type="checkbox"
+                checked=(true)
+                name="tags"
+                tienda-datatype="[]"
+                tienda-datakey=`${tag}`
+                form="productForm")
+                span.checkmark.bg-purple
+                | Purple
+            
+            .input-group
+              label.checkbox-wrapper
+                input(
+                type="checkbox"
+                checked=(true)
+                name="tags"
+                tienda-datatype="[]"
+                tienda-datakey=`${tag}`
+                form="productForm")
+                span.checkmark.bg-black
+                | Black
+            
+            .input-group
+              //- @ToDo: [1] Cambiar el CSS para que sea solo necesario poner disabled en el input  
+              label.checkbox-wrapper.disabeld
+                input(
+                type="checkbox"
+                checked=(true)
+                name="tags"
+                tienda-datatype="[]"
+                tienda-datakey=`${tag}`
+                disabled
+                form="productForm")
+                span.checkmark.bg-black
+                | Black
+                
             .input-group
               label
                 input(
@@ -487,4 +596,7 @@ html(lang="en")
         
         section
           h1 Grid
+        
+        section
+          h1 Carousel
     

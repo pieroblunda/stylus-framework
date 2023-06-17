@@ -4,27 +4,45 @@ import Pug from 'Pug';
 import Colors from 'colors';
 
 
-class Compiler {
+class StylusFramework {
+  
+  static compileAll() {
+    this.compileStylus();
+    this.compileLayoutPug();
+    this.copyLayoutCss();
+  }
+  
+  static copyTo(dir) {
+    const filePath = `./dest/stylus-framework.min.css`;
+    const copy = `${dir}/stylus-framework.min.css`;
+    Fs.copyFile(filePath, copy, (error) => {
+      if (error) {
+        throw error
+        return;
+      }
+      console.log('File has been moved to another folder.')
+    })
+  }
   
   static copyLayoutCss() {
     Fs.copyFileSync('style.css', './dest/style.css');
   }
   
-  static compilePug() {
+  static compileLayoutPug() {
     
     const compiledFunction = Pug.compileFile('index.pug');
 
     // Render a set of data
     let content = compiledFunction();
-    Fs.writeFileSync('./dest/index.html', content,'utf8');
-    console.log(Colors.grey('compiled ') + `index.pug ➞ index.html`);
+    Fs.writeFileSync('./docs/index.html', content,'utf8');
+    console.log(Colors.grey('compiled ') + `index.pug ➞ docs/index.html`);
   }
   
   static compileStylus() {
     
     let input = [{
-      src: `./styles/app.styl`,
-      dest: `./dest/app.min.css`
+      src: `./src/app.styl`,
+      dest: `./dest/stylus-framework.min.css`
     }];
     
     let promisesBag = [];
@@ -38,7 +56,7 @@ class Compiler {
         /* @ToDo: [3] sourcemap does not work */
         // .set('sourcemap', true)
         .set('paths', [
-          global.BASE_PATH + '/client/styles',
+          global.BASE_PATH + '/client/src',
           global.BASE_PATH + '/client/**',
         ])
         .render(function(err, css){
@@ -72,8 +90,6 @@ class Compiler {
   
 }
 
-export default Compiler;
+export default StylusFramework;
 
-Compiler.compileStylus();
-Compiler.compilePug();
-Compiler.copyLayoutCss();
+StylusFramework.compileAll();
