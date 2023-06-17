@@ -2,6 +2,7 @@ import Fs from 'fs';
 import Stylus from 'stylus';
 import Pug from 'Pug';
 import Colors from 'colors';
+import { fileURLToPath } from 'url';
 
 
 class StylusFramework {
@@ -13,9 +14,10 @@ class StylusFramework {
   }
   
   static copyTo(dir) {
-    const filePath = `./dest/stylus-framework.min.css`;
-    const copy = `${dir}/stylus-framework.min.css`;
-    Fs.copyFile(filePath, copy, (error) => {
+    const fromDirectory = fileURLToPath(import.meta.url).replace('/app.js', '');
+    const from = `${fromDirectory}/dest/stylus-framework.min.css`;
+    const to = `${dir}/stylus-framework.min.css`;
+    Fs.copyFile(from, to, (error) => {
       if (error) {
         throw error
         return;
@@ -91,5 +93,3 @@ class StylusFramework {
 }
 
 export default StylusFramework;
-
-StylusFramework.compileAll();
