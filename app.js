@@ -1,6 +1,6 @@
 import Fs from 'fs';
 import Stylus from 'stylus';
-import Pug from 'Pug';
+import Pug from 'pug';
 import Colors from 'colors';
 import { fileURLToPath } from 'url';
 
