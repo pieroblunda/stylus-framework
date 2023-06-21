@@ -22,7 +22,7 @@ class StylusFramework {
         throw error
         return;
       }
-      console.log('File has been moved to another folder.')
+      console.log(Colors.grey('copied ') + `${from} ➞ ${to}`);
     })
   }
   
