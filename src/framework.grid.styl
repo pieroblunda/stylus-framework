@@ -3,8 +3,10 @@
 /* ------------------- */
 .row
   display flex
+  gap 8px
 .col
   flex 1
+  flex-basis 100%
   
 .grid
   display grid
@@ -21,6 +23,8 @@
     grid-row-gap 16px
   
 @media screen and (min-width: 1024px)
+  .row
+    gap 16px
   .grid
     &.desktop-4-colums
       grid-template-columns repeat(4, 1fr)
